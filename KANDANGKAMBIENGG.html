@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kandang Kambing Bang Faiz - Premium Farm</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --green: #3D6B4F; --gold: #C9A962; --terracotta: #C67B5C; --bg: #F9F7F2; --dark: #1F1F1F;
+    }
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: var(--bg); color: var(--dark); }
+    h1, h2, h3, .font-display { font-family: 'Cormorant Garamond', serif; }
+    
+    /* Scroll Reveal Animation */
+    .reveal { opacity: 0; transform: translateY(40px); transition: all 1s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+    .delay-1 { transition-delay: 0.1s; } .delay-2 { transition-delay: 0.2s; } .delay-3 { transition-delay: 0.3s; }
+    
+    /* Card Hover */
+    .card-hover { transition: all 0.4s ease; }
+    .card-hover:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    
+    /* Hero Gradient */
+    .hero-bg {
+      background: linear-gradient(135deg, #F9F7F2 0%, #EFE9E1 100%);
+      background-image: radial-gradient(circle at 20% 80%, rgba(61, 107, 79, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(201, 169, 98, 0.05) 0%, transparent 50%);
+    }
+    
+    /* Floating Animation */
+    @keyframes float { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-20px) rotate(2deg); } }
+    .float { animation: float 6s ease-in-out infinite; }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="fixed w-full top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200/50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+      <a href="#" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-lg" style="background: linear-gradient(135deg, var(--green) 0%, #2A4D3A 100%);">
+          KF
+        </div>
+        <div class="hidden sm:block">
+          <span class="block font-bold text-lg leading-tight">Bang Faiz</span>
+          <span class="block text-xs text-gray-500">Kambing Premium</span>
+        </div>
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="#produk" class="hidden md:block text-sm font-medium text-gray-600 hover:text-green-800 transition">Produk</a>
+        <a href="#tentang" class="hidden md:block text-sm font-medium text-gray-600 hover:text-green-800 transition">Tentang</a>
+        <a href="https://wa.me/6289541994857" target="_blank" class="flex items-center gap-2 bg-green-500 text-white px-5 py-2.5 rounded-full font-semibold text-sm hover:bg-green-600 transition shadow-md shadow-green-500/30">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero-bg pt-32 pb-20 min-h-screen flex items-center relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+      <!-- Text Content -->
+      <div class="relative z-10">
+        <div class="reveal inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-amber-300 bg-amber-50 mb-6">
+          <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+          <span class="text-xs font-bold tracking-wider text-amber-800">Ternak Premium Sejak 2015</span>
+        </div>
+        
+        <h1 class="reveal delay-1 text-5xl md:text-7xl font-bold leading-tight mb-6">
+          Kandang Kambing <br>
+          <span class="font-display italic" style="color: var(--green);">Bang Faiz</span>
+        </h1>
+        
+        <p class="reveal delay-2 text-lg text-gray-600 mb-10 leading-relaxed max-w-xl">
+          Menyediakan kambing qurban, aqiqah, dan ternak berkualitas tinggi. Dipelihara dengan pakan terbaik, lingkungan sehat, dan perhatian profesional.
+        </p>
+        
+        <div class="reveal delay-3 flex flex-wrap gap-4">
+          <a href="https://wa.me/6289541994857?text=Assalamualaikum%20Bang%20Faiz%2C%20saya%20ingin%20memesan%20kambing" target="_blank" class="flex items-center gap-3 px-8 py-4 rounded-2xl font-bold text-white transition hover:scale-105 shadow-xl" style="background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);">
+            Pesan Sekarang
+          </a>
+          <a href="#produk" class="flex items-center gap-2 px-8 py-4 rounded-2xl font-bold border-2 hover:bg-gray-100 transition" style="border-color: var(--gold); color: var(--gold);">
+            Lihat Koleksi
+          </a>
+        </div>
+      </div>
+
+      <!-- Image/Illustration -->
+      <div class="reveal delay-2 relative hidden lg:block">
+        <div class="relative w-full aspect-square max-w-md mx-auto">
+          <div class="absolute inset-0 rounded-3xl overflow-hidden shadow-2xl border-8 border-white" style="background: linear-gradient(135deg, var(--green) 0%, #2A4D3A 100%);">
+            <svg viewBox="0 0 400 400" class="w-full h-full p-12">
+              <circle cx="350" cy="50" r="100" fill="rgba(255,255,255,0.05)"/>
+              <circle cx="50" cy="350" r="120" fill="rgba(255,255,255,0.05)"/>
+              <g transform="translate(80, 100)">
+                <ellipse cx="120" cy="140" rx="90" ry="70" fill="#F5F0EB"/>
+                <ellipse cx="60" cy="100" rx="55" ry="48" fill="#F5F0EB"/>
+                <path d="M30 60 Q0 20 40 35" stroke="#C9A962" stroke-width="10" fill="none" stroke-linecap="round"/>
+                <path d="M90 60 Q120 20 80 35" stroke="#C9A962" stroke-width="10" fill="none" stroke-linecap="round"/>
+                <circle cx="40" cy="90" r="8" fill="#1F1F1F"/>
+                <circle cx="80" cy="90" r="8" fill="#1F1F1F"/>
+                <circle cx="42" cy="88" r="3" fill="white"/>
+                <circle cx="82" cy="88" r="3" fill="white"/>
+                <ellipse cx="60" cy="120" rx="15" ry="10" fill="#E8E4DF"/>
+                <circle cx="55" cy="120" r="3" fill="#1F1F1F"/>
+                <circle cx="65" cy="120" r="3" fill="#1F1F1F"/>
+                <rect x="80" y="200" width="20" height="60" rx="8" fill="#F5F0EB"/>
+                <rect x="150" y="200" width="20" height="60" rx="8" fill="#F5F0EB"/>
+              </g>
+            </svg>
+            <div class="absolute top-6 right-6 bg-white/90 backdrop-blur px-4 py-2 rounded-full shadow-lg">
+              <span class="font-bold text-sm" style="color: var(--green);">Stok: 50+</span>
+            </div>
+          </div>
+          <!-- Floating Badge -->
+          <div class="float absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-2xl border border-gray-100">
+            <div class="flex items-center gap-3">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background: rgba(201, 169, 98, 0.15);">
+                <svg class="w-6 h-6" fill="none" stroke="#C9A962" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <div>
+                <p class="text-2xl font-display font-bold" style="color: var(--gold);">9+ Tahun</p>
+                <p class="text-xs text-gray-500">Pengalaman</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="py-16 bg-white border-y border-gray-100">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <div class="reveal"><p class="text-4xl font-display font-bold" style="color: var(--gold);">9+</p><p class="text-sm text-gray-500 mt-1">Tahun Pengalaman</p></div>
+      <div class="reveal delay-1"><p class="text-4xl font-display font-bold" style="color: var(--gold);">150+</p><p class="text-sm text-gray-500 mt-1">Kambing Terjual</p></div>
+      <div class="reveal delay-2"><p class="text-4xl font-display font-bold" style="color: var(--gold);">50+</p><p class="text-sm text-gray-500 mt-1">Stok Tersedia</p></div>
+      <div class="reveal delay-3"><p class="text-4xl font-display font-bold" style="color: var(--gold);">200+</p><p class="text-sm text-gray-500 mt-1">Pelanggan Puas</p></div>
+    </div>
+  </section>
+
+  <!-- TENTANG -->
+  <section id="tentang" class="py-24" style="background: var(--bg);">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <span class="reveal text-sm font-bold tracking-wider uppercase" style="color: var(--gold);">Tentang Kami</span>
+        <h2 class="reveal delay-1 text-4xl md:text-5xl font-bold mt-4 mb-6">Dedikasi Tinggi untuk Kualitas Ternak</h2>
+        <p class="reveal delay-2 text-gray-600 leading-relaxed mb-6">
+          Berdiri sejak 2015, Kandang Kambing Bang Faiz berkomitmen menghasilkan ternak kambing berkualitas premium. Kami memelihara kambing dengan standar tinggi, pakan alami, dan perhatian kesehatan rutin.
+        </p>
+        <p class="reveal delay-3 text-gray-600 leading-relaxed">
+          Setiap kambing dirawat dengan dedikasi penuh untuk memastikan kesehatan optimal, fisik kuat, dan kualitas terbaik.
+        </p>
+      </div>
+      <div class="reveal delay-2 grid grid-cols-2 gap-4">
+        <div class="p-8 bg-white rounded-2xl shadow-sm card-hover">
+          <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-4" style="background: rgba(61, 107, 79, 0.1);">
+            <svg class="w-7 h-7" fill="none" stroke="var(--green)" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-1">Kualitas Terjamin</h3>
+          <p class="text-sm text-gray-500">Kambing sehat & bebas penyakit</p>
+        </div>
+        <div class="p-8 bg-white rounded-2xl shadow-sm card-hover mt-8">
+          <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-4" style="background: rgba(201, 169, 98, 0.1);">
+            <svg class="w-7 h-7" fill="none" stroke="var(--gold)" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-1">Layanan Cepat</h3>
+          <p class="text-sm text-gray-500">Respon WhatsApp 1x24 jam</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUK -->
+  <section id="produk" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <span class="reveal text-sm font-bold tracking-wider uppercase" style="color: var(--gold);">Koleksi Kami</span>
+        <h2 class="reveal delay-1 text-4xl md:text-5xl font-bold mt-4">Pilihan Kambing Premium</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8" id="productGrid"></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 relative overflow-hidden" style="background: linear-gradient(135deg, var(--green) 0%, #2A4D3A 100%);">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 50% 50%, white 1px, transparent 1px); background-size: 20px 20px;"></div>
+    <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+      <h2 class="reveal text-4xl md:text-5xl font-bold text-white mb-6">Siap Memesan?</h2>
+      <p class="reveal delay-1 text-lg text-white/80 mb-10">Hubungi Bang Faiz sekarang untuk konsultasi gratis dan dapatkan kambing terbaik.</p>
+      <a href="https://wa.me/6289541994857" target="_blank" class="reveal delay-2 inline-flex items-center gap-3 bg-white px-10 py-5 rounded-2xl font-bold text-lg transition hover:scale-105 shadow-2xl" style="color: var(--green);">
+        Chat WhatsApp Sekarang
+      </a>
+      <p class="reveal delay-3 mt-8 text-white/60 font-mono tracking-wider">+62 895-4199-4857</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-12 bg-gray-900 text-gray-400">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-sm">2024 Kandang Kambing Bang Faiz. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // DATA PRODUK
+    const products = [
+      { name: "Kambing Qurban A", type: "Jantan Dewasa", weight: "45-55 kg", price: "Rp 4.000.000", color: "#3D6B4F" },
+      { name: "Kambing Qurban B", type: "Jantan", weight: "35-45 kg", price: "Rp 3.200.000", color: "#5A8F6B" },
+      { name: "Paket Aqiqah", type: "Campuran", weight: "18-25 kg", price: "Rp 2.000.000", color: "#C9A962" },
+      { name: "Kambing Indukan", type: "Betina", weight: "40-50 kg", price: "Rp 4.500.000", color: "#C67B5C" },
+      { name: "Kambing Anakan", type: "Mixed", weight: "12-18 kg", price: "Rp 1.500.000", color: "#8B7355" },
+      { name: "Kambing Pedaging", type: "Campuran", weight: "30-40 kg", price: "Rp 2.800.000", color: "#7A8F6B" }
+    ];
+
+    // RENDER PRODUK
+    const grid = document.getElementById('productGrid');
+    if(grid) {
+      grid.innerHTML = products.map((p, i) => `
+        <div class="reveal delay-${i % 3} bg-gray-50 rounded-2xl overflow-hidden card-hover group">
+          <div class="h-48 flex items-center justify-center relative overflow-hidden" style="background: linear-gradient(135deg, ${p.color} 0%, ${p.color}99 100%);">
+            <svg viewBox="0 0 100 80" class="w-24 h-20 transition group-hover:scale-110">
+              <ellipse cx="50" cy="45" rx="35" ry="25" fill="#F5F0EB" opacity="0.9"/>
+              <ellipse cx="25" cy="28" rx="18" ry="15" fill="#F5F0EB" opacity="0.9"/>
+              <circle cx="20" cy="25" r="3" fill="#1F1F1F"/>
+            </svg>
+          </div>
+          <div class="p-6">
+            <span class="text-xs font-bold text-white px-3 py-1 rounded-full" style="background: ${p.color};">${p.type}</span>
+            <h3 class="text-xl font-bold mt-3">${p.name}</h3>
+            <p class="text-sm text-gray-500 mt-1">Berat: ${p.weight}</p>
+            <div class="flex justify-between items-center mt-5">
+              <span class="text-2xl font-display font-bold" style="color: var(--terracotta);">${p.price}</span>
+              <a href="https://wa.me/6289541994857?text=Saya%20tertarik%20dengan%20${encodeURIComponent(p.name)}" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-green-600 transition">Pesan</a>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // ANIMASI SCROLL
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { 
+        if(e.isIntersecting) e.target.classList.add('active'); 
+      });
+    }, { threshold: 0.1 });
+    
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
